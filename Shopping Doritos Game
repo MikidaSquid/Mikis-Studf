@@ -1,0 +1,544 @@
+import time
+
+while True:
+  badges = []
+  has_doritos = False
+  has_cart = False
+  room = 1
+  end = False
+  oof = False
+
+  time.sleep(1)
+  print('The shopping mall')
+  time.sleep(2.1)
+  print("quick note before playing:")
+  time.sleep(1.5)
+  print("to choose an option, be carfeul to type the exact option stated.")
+  time.sleep(0.8)
+  print("got that? Actions available: yes, no")
+  cmd = input("> ")
+  if cmd == 'no':
+    print("ok, bye.")
+    time.sleep(0.5)
+    print("Badge earnt - How did you already lose you noob")
+    badges.append("How did you already lose you noob");
+    time.sleep(0.9)
+    print("Badges earnt:")
+    time.sleep(0.7)
+    print(*badges)
+    time.sleep(0.7)
+    print("Restarting Game...")
+    time.sleep(3)
+    end = True
+  elif cmd == '42':
+    print("42.")
+    time.sleep(1.3)
+    print("Hey that's a pretty cool number!")
+    time.sleep(1.3)
+    print("but...")
+    time.sleep(1)
+    print("Now the story's not going anywhere.")
+    time.sleep(1)
+    print("Hey, look.")
+    time.sleep(0.9)
+    print("Because I'm feeling generous today,")
+    time.sleep(1)
+    print("and i've got nothing better to do,")
+    time.sleep(1)
+    print("Here's some doritos.")
+    time.sleep(0.9)
+    print("Enjoy.")
+    time.sleep(1.7)
+    print("I'll fix this later, so pls don't tell anyone, ok?")
+    time.sleep(1.4)
+    print("Thanks")
+    time.sleep(0.8)
+    print("bye.")
+    time.sleep(0.7)
+    print("Badge earnt - 42 Easter egg")
+    badges.append("42 Easter egg");
+    time.sleep(0.9)
+    print("Badges earnt:")
+    time.sleep(0.7)
+    print(*badges)
+    time.sleep(0.7)
+    print("Restarting Game...")
+    time.sleep(3)
+    end = True
+  elif cmd == 'squid':
+    print("Hey cool!")
+    time.sleep(1.3)
+    print("But how did'cha know my favourite animal?")
+    time.sleep(1.5)
+    print("Well I'm pretty happy tbh.")
+    time.sleep(1.5)
+    print("Here's some calamari rings to celebrate this occasion.")
+    time.sleep(1.5)
+    print("Cya!")
+    time.sleep(1.2)
+    print("Badge earnt - Clamari Rings easter egg")
+    badges.append("Calamari Rings easter egg");
+    time.sleep(0.9)
+    print("Badges earnt:")
+    time.sleep(0.7)
+    print(*badges)
+    time.sleep(0.7)
+    print("Restarting Game...")
+    time.sleep(3)
+    end = True
+  elif cmd == 'primarina':
+    print("Don't touch my waifu!")
+    time.sleep(1.6)
+    print(">:(((((((")
+    time.sleep(1.2)
+    print("Badge earnt - >:(((((( easter egg")
+    badges.append(">:(((((( easter egg");
+    time.sleep(0.9)
+    print("Badges earnt:")
+    time.sleep(0.7)
+    print(*badges)
+    time.sleep(0.7)
+    print("Restarting Game...")
+    time.sleep(3)
+    end = True
+    
+  while not end:
+    # Entrance to the mall
+    if room == 1:
+      print("You are standing at the entrance of the shopping mall.")
+      time.sleep(1)
+      if has_doritos == False:
+        print("You see a supermarket in the distance.")
+      print("Actions available: look, forward")
+      cmd = input("> ")
+      if cmd == 'look':
+        if has_cart:
+          print("You already took the shopping cart.")
+        else:
+          print("You look around , and see something shiny.")
+          time.sleep(1)
+          print("It is a shopping cart. Would you like to use it? Actions Available: yes, no")
+          get = input('> ')
+          if get == 'yes':
+            print('You grab the shopping cart.')
+            has_cart = True
+          else:
+            print('You leave the shopping cart in the rack.')
+      elif cmd == 'forward':
+        room = 2
+
+    # Buying the Doritos
+    elif room == 2:
+      if not has_doritos:
+        print("When you enter the supermarket, You see some doritos,")
+        time.sleep(1.5)
+        print("It's crispy deliciousness awaiting you.")
+        time.sleep(1)
+        if has_cart:
+          print("Luckily you have space in your shopping trolley.")
+          time.sleep(1.5)
+          print("You put the tasty doritos in the cart.")
+          has_doritos = True
+        else:
+          print("With no space in your cart,")
+          time.sleep(1)
+          print("you die of hunger because you wanted them...")
+          time.sleep(1)
+          print("You lose.")
+          time.sleep(1)
+          print("Game Over.")
+          time.sleep(0.5)
+          print("Badge earnt - No doritos")
+          badges.append("No doritos");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+      else:
+        print("The doritos are all gone now,")
+        print("You still have yours in your trolley.")
+
+      # getting to the counter
+      if not end:
+        time.sleep(1)
+        print("You go forward.")
+        time.sleep(0.65)
+        print("...")
+        time.sleep(1.5)
+        room = 3
+
+      if room == 3:
+        print("You keep walking and get to the counter,")
+        time.sleep(1.2)
+        print("You have no money!")
+        time.sleep(0.8)
+        print("what do you do?")
+        time.sleep(1)
+        print("actions available: use the atm or run")
+        do = input("> ")
+        if do == "use the atm":
+          print("You get money.")
+          time.sleep(1)
+          print("You buy your doritos.")
+        elif do == "run":
+          print("You run with it and get shot")
+          time.sleep(1)
+          print("you die.")
+          time.sleep(1)
+          print("You lose.")
+          time.sleep(1)
+          print("Game Over.")
+          time.sleep(0.5)
+          print("Badge earnt - Robber!")
+          badges.append("Robber!");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        else:
+          print("Wut you doing?")
+          print("???")
+          time.sleep(0.5)
+          print("Badge earnt - Wut.")
+          badges.append("Wut.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          oof = True
+          end = True
+
+      # just another dumb decision tbh
+      if not end:
+        print("Actions available: forward, do a cringy fortnite dance")
+        cmd = input("> ")
+        if cmd == 'forward':
+          print("You don't do a cringy fortnite dance, as that's only for Boomers.")
+        elif cmd == 'do a cringy fortnite dance':
+          print("You start dancing but die of cringe.")
+          time.sleep(0.5)
+          print("Badge earnt - Why")
+          badges.append("Why");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        elif cmd == 'dab':
+          print("You do an epic gamer dab.")
+          time.sleep(1)
+          print("The whole supermarket collapses around you because of the impact.")
+          time.sleep(1)
+          print("You fling the doritos in the air,")
+          time.sleep(0.8)
+          print("and you pull out your AK47,")
+          time.sleep(1)
+          print("and you shoot the bag into pieces.")
+          time.sleep(1)
+          print("You jump through the air in slo motion and catch all the doritos in your mouth.")
+          time.sleep(2)
+          print("The end.")
+          time.sleep(0.7)
+          print("FYI, you're pretty cringy for finding this lol.")
+          time.sleep(1.7)
+          print("Badge earnt - Dab easter egg")
+          badges.append("Dab easter egg");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        else:
+          print("Bruh.")
+          time.sleep(1)
+          time.sleep(0.5)
+          print("Badge earnt - Bruh")
+          badges.append("Bruh");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+
+      # car park
+      if not end:
+        print("You keep walking forward, and you eventually get to the carpark.")
+        time.sleep(1)
+        print("You can't find your keys!!!")
+        time.sleep(0.8)
+        print("actions available: bash open the door, keep searching, go back to the shopping centre")
+        cmd = input("> ")
+        if cmd == 'bash open the door':
+          print("You smash your car into pieces because you've been bench pressing at the gym.")
+          time.sleep(0.8)
+          print("RIP your car.")
+          time.sleep(0.5)
+          print("Badge earnt - Rip the car.")
+          badges.append("Rip the car.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        elif cmd == 'keep searching':
+          print("You keep searching through your bag thoroughly, but you search too hard.")
+          time.sleep(0.8)
+          print("Your hands hurt.")
+          time.sleep(0.7)
+          print("Ouch.")
+          time.sleep(0.5)
+          print("Badge earnt - My hands hurt!!!")
+          badges.append("My hands hurt!!!");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        elif cmd == 'go back to the shopping centre':
+          print("You walk back into the shopping centre to see if you dropped your keys.")
+          time.sleep(1.3)
+          print("After 37.9783658364836478283904746382638463 seconds of searching,")
+          time.sleep(1)
+          print("You find your keys!!!")
+          time.sleep(0.8)
+          print("Woooo Hooo!")
+          time.sleep(0.6)
+          print("you get in your car and set off to get back home.")
+          time.sleep(1)
+        else:
+          print("Doing that won't solve anything.")
+          time.sleep(0.5)
+          print("Badge earnt - Um.")
+          badges.append("Um.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+          # road
+      if not end:
+        print("you're driving down a road towards your home,")
+        time.sleep(0.9)
+        print("and there's a LOT of traffic!!!!!!!!!!")
+        time.sleep(0.8)
+        print("You're waiting in the line,")
+        time.sleep(0.7)
+        print("But even after 30 mins, you haven't moved a single bit!!!")
+        time.sleep(1)
+        print("you're getting really frustrated now.")
+        time.sleep(0.8)
+        print("Actions available: ram into the car in front, take the road down the side,")
+        print("                   jump out of the car, keep waiting")
+        cmd = input("> ")
+        if cmd == 'ram into the car in front':
+          print("you ram into the car in front,")
+          time.sleep(0.8)
+          print("sadly you weren't looking properly,")
+          time.sleep(0.8)
+          print("but it turns out it was a truck!")
+          time.sleep(0.9)
+          print("The airbags inflate and the front of your car is destroyed.")
+          time.sleep(0.8)
+          print("you think to yourself, at least things can't get worse!")
+          time.sleep(1)
+          print("But then you realise the doritos are missing from the impact of the crash.")
+          time.sleep(0.8)
+          print("you die of sadness.")
+          time.sleep(0.5)
+          print("Badge earnt - Smash!")
+          badges.append("Smash!");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        elif cmd == 'jump out of the car':
+          print("you jump out of the car and walk down the road towards your house,")
+          time.sleep(0.9)
+          print("but then a drunk person driving a car accidentally rams into you.")
+          time.sleep(0.7)
+          print("Ouch, that must've hurt.")
+          time.sleep(0.5)
+          print("The moral of the story is to NOT drink drive.")
+          time.sleep(0.8)
+          print("Stay safe on the roads.")
+          time.sleep(0.5)
+          print("Badge earnt - Don't drink drive.")
+          badges.append("Don't drink drive.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        elif cmd == 'take the road down the side':
+          print("You turn off the road to go down another road,")
+          time.sleep(0.8)
+          print("But it turns out that it is a No-Through road!")
+          time.sleep(0.3)
+          print("There is a wall at the end of the road!")
+          time.sleep(0.4)
+        else:
+          print("You keep waiting because all the other options don't suit you.")
+          time.sleep(0.7)
+          print("You wait another 8784563478569576475634064317563095637609635 years.")
+          time.sleep(0.8)
+          print("It is very boring.")
+          time.sleep(0.4)
+          print("Welp, The end I guess?")
+          time.sleep(0.5)
+          print("Badge earnt - Bored.")
+          badges.append("Bored.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+      if not end:
+        print("What do you do?!?!?!?!?!?")
+        print("Actions available: jump out of the car, brace for impact, try to solve something out")
+        cmd = input("> ")
+        if cmd == 'jump out of the car':
+          print("You leap out of the car gracefully,")
+          time.sleep(0.5)
+          print("and you crash onto the ground softly.")
+          time.sleep(0.4)
+          print("Your car smashes into the wall and blows up.")
+          time.sleep(0.4)
+          print("You think to yourself: Whew, at least I'm safe!")
+          time.sleep(0.3)
+          print("But then you realise the doritos have spilled all over the floor, and are dirty.")
+          time.sleep(0.4)
+          print("You cry in sadness.")
+          time.sleep(0.5)
+          print("Badge earnt - Dirty doritos.")
+          badges.append("Dirty doritos.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        elif cmd == 'try to solve something out':
+          print("You look around your car to see if you can do anything.")
+          time.sleep(0.8)
+          print("You notice a button you've never noticed before.")
+          time.sleep(0.3)
+          print("You quickly press it, as you have no other options.")
+          time.sleep(0.5)
+          print("Guess what!")
+          time.sleep(0.3)
+          print("Turns out that your car is actually a secret spy car,")
+          print("developed by military scientists from NASA.")
+          time.sleep(1)
+          print("The car transforms into a plane, and only just misses the wall.")
+          time.sleep(0.5)
+          print("You fly through the sky back to your house.")
+          time.sleep(0.7)
+          print("You land your car-plane back at your house, and you walk back to your room,")
+          time.sleep(0.3)
+          print("with your tasty doritos in hand.")
+          time.sleep(0.8)
+        elif cmd == 'save':
+          print("You smash into the wall.")
+          time.sleep(1.9)
+          print("But.")
+          time.sleep(1.5)
+          print("You are filled with determination.")
+          time.sleep(1.2)
+          print("Your soul forges back together, and somehow,")
+          time.sleep(1.5)
+          print("you are still alive.")
+          time.sleep(1.7)
+          print("You walk back home happily,")
+          time.sleep(1.7)
+          print("while munching happily on your doritos.")
+          time.sleep(2.5)
+          print("But you feel like you're being watched by someone.")
+          time.sleep(1.5)
+          print("Someone wearing a blue hoodie.")
+          time.sleep(1.7)
+          print("badge earnt - Sans. easter egg")
+          badges.append("Sans. easter egg");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+        else:
+          print("You smash into the wall,")
+          time.sleep(0.5)
+          print("Oof.")
+          time.sleep(0.5)
+          print("badge earnt - The wall.")
+          badges.append("The wall.");
+          time.sleep(0.9)
+          print("Badges earnt:")
+          time.sleep(0.7)
+          print(*badges)
+          time.sleep(0.7)
+          print("Restarting Game...")
+          time.sleep(3)
+          end = True
+    # the end
+    else:
+      print("You sit down in your room")
+      time.sleep(0.5)
+      print("You eat the doritos you bought.")
+      time.sleep(1)
+      print("they are very tasty!")
+      time.sleep(1)
+      print("Congratulations, you win!")
+      time.sleep(0.5)
+      print("Badge earnt - True ending.")
+      badges.append("True ending.");
+      time.sleep(0.9)
+      print("Badges earnt:")
+      time.sleep(0.7)
+      print(*badges)
+      time.sleep(0.7)
+      print("Restarting Game...")
+      time.sleep(3)
+      end = True
